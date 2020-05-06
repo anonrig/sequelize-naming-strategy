@@ -34,7 +34,6 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "axios": "^0.19.2",
     "pluralize": "^8.0.0",
     "typeorm": "^0.2.24"
   },
