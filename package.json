@@ -1,0 +1,73 @@
+{
+  "name": "sequelize-naming-strategy",
+  "version": "1.0.0",
+  "description": "Sequelize naming strategy for TypeORM",
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
+  "types": "dist/main/index.d.ts",
+  "repository": "https://github.com/relevantfruit/sequelize-naming-strategy.git",
+  "author": "Yagiz Nizipli <yagiz@relevantfruit.com>",
+  "license": "MIT",
+  "files": [
+    "/dist/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "style": "run-s style:*",
+    "style:format": "prettier --write \"src/**/*.ts\"",
+    "style:lint": "eslint src --ext .js,.ts --fix",
+    "commit": "git-cz",
+    "clean": "rimraf dist && rimraf coverage && rimraf docs",
+    "build": "run-s clean && run-p build:*",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --config jestconfig.json --watch",
+    "cov": "run-s test && run-s cov:open",
+    "cov:open": "open-cli coverage/lcov-report/index.html",
+    "cov:publish": "codecov",
+    "doc": "typedoc src && run-s doc:open",
+    "doc:open": "open-cli docs/index.html",
+    "doc:publish": "gh-pages -t -m \"chore: update docs\" -d docs -r https://$GH_TOKEN@github.com/relevantfruit/sequelize-naming-strategy.git",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "pluralize": "^8.0.0",
+    "typeorm": "^0.2.24"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.0.5",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "@types/pluralize": "0.0.29",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "codecov": "^3.6.5",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "3.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "gh-pages": "^2.2.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "npm-run-all": "^4.1.5",
+    "open-cli": "^6.0.1",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.0.7",
+    "ts-jest": "^25.5.0",
+    "ts-node": "^8.10.1",
+    "typedoc": "^0.17.6",
+    "typedoc-plugin-nojekyll": "^1.0.1",
+    "typescript": "^3.8.3"
+  }
+}
