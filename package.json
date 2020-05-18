@@ -63,7 +63,7 @@
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "semantic-release": "^17.0.7",
-    "ts-jest": "^25.5.0",
+    "ts-jest": "^26.0.0",
     "ts-node": "^8.10.1",
     "typedoc": "^0.17.6",
     "typedoc-plugin-nojekyll": "^1.0.1",
