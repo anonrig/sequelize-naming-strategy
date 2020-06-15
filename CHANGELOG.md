@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/relevantfruit/sequelize-naming-strategy/compare/v1.0.0...v1.0.1) (2020-06-15)
+
+
+### Bug Fixes
+
+* **dependency:** bump dependencies for security ([6fc6a48](https://github.com/relevantfruit/sequelize-naming-strategy/commit/6fc6a489743514a0100cb40eb01fd1179c940530))
+
 # 1.0.0 (2020-05-06)
 
 
