@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "pluralize": "^8.0.0",
-    "typeorm": "^0.2.25"
+    "typeorm": "^0.3.26"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
